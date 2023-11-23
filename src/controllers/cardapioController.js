@@ -29,7 +29,7 @@ exports.adicionarItem = (req, res) => {
 };
 
 exports.atualizarItem = (req, res) => {
-    const itemId = req.params.id;
+    const itemId = parseInt(req.params.id, 10);
     const { nome, tipo, descricao, preco } = req.body;
 
     db.query(
