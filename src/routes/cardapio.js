@@ -1,6 +1,5 @@
 const express = require('express');
 const cardapioController = require('../controllers/cardapioController');
-const uploadMiddleware = require('../middleware/uploadMiddleware');
 
 const router = express.Router();
 

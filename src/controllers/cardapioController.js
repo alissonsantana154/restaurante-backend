@@ -12,7 +12,7 @@ exports.getCardapio = (req, res) => {
 };
 
 exports.adicionarItem = (req, res) => {
-    const { nome, tipo, descricao, preco } = req.body;
+    const { nome, tipo, descricao, preco, imagem_url } = req.body;
 
     db.query(
         'INSERT INTO alimentos (nome, tipo, descricao, preco, imagem_url) VALUES (?, ?, ?, ?, ?)',
