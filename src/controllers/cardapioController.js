@@ -47,7 +47,7 @@ exports.atualizarItem = (req, res) => {
 };
 
 exports.excluirItem = (req, res) => {
-    const itemId = req.params.id;
+    const itemId = parseInt(req.params.id, 10);
 
     db.query('DELETE FROM alimentos WHERE id = ?', [itemId], err => {
         if (err) {
